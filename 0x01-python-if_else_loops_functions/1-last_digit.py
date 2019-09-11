@@ -3,7 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 lst_dig = int(str(number)[-1])
 sign = ""
-if number < 0:
+if number < 0 and lst_dig != 0:
     sign = "-"
 if lst_dig == 0:
     msg = "and is 0"
