@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 	if (head == NULL || *head == NULL)
 		return (1);
 	cpy = *head;
-	for (; cpy && len < 200; len++, cpy = cpy->next)
+	for (; cpy && len < 4000; len++, cpy = cpy->next)
 		num[len] = cpy->n;
 	len--;
 	aux = len;
