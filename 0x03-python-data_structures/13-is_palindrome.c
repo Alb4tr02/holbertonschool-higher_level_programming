@@ -26,7 +26,7 @@ int is_palindrome(listint_t **head)
 	listint_t *cpy = NULL;
 
 	if (head == NULL)
-		return (0);
+		return (1);
 	cpy = *head;
 	len = len_list(head) - 1;
 	aux = len;
