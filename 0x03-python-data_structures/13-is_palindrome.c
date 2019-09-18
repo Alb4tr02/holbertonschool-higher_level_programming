@@ -30,6 +30,8 @@ int is_palindrome(listint_t **head)
 	cpy = *head;
 	len = len_list(head) - 1;
 	aux = len;
+	if (len == 0)
+		return (1);
 	num = (int *)malloc(sizeof(int) * len);
 	for (; i <= len; i++, cpy = cpy->next)
 		num[i] = cpy->n;
