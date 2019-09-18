@@ -7,26 +7,19 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int len = 0, i = 0, aux = 0, size = 100;
-	int *num = NULL;
+	int len = 0, i = 0, aux = 0;
+	int num[200];
 	listint_t *cpy = NULL;
 
 	if (head == NULL || *head == NULL)
 		return (1);
 	cpy = *head;
-	num = (int *)malloc(sizeof(int) * size);
-	for (; cpy; len++, cpy = cpy->next)
+	for (; cpy && len < 200; len++, cpy = cpy->next)
 		num[len] = cpy->n;
 	len--;
 	aux = len;
 	for (i = 0; i <= len / 2; i++, aux--)
-	{
 		if (num[i] != num[aux])
-		{
-			free(num);
 			return (0);
-		}
-	}
-	free(num);
 	return (1);
 }
