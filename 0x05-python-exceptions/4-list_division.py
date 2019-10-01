@@ -13,7 +13,6 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             print("out of range")
             c = 0
-            break
         finally:
             l.append(c)
     return l
