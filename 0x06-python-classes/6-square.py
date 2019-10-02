@@ -34,7 +34,7 @@ class Square:
     def position(self):
         return self.__position
 
-    def _position(self, value):
+    def _position(self, position):
         if position is not None:
             if position[0] < 0 or position[1] < 0:
                 ms = "position must be a tuple of 2 positive integers"
