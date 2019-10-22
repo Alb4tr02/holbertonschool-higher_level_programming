@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+"""Test for class base"""
 
 
 import unittest
@@ -7,8 +7,10 @@ from models.base import Base
 
 
 class TestBaseClass(unittest.TestCase):
+    """TestBase Class"""
 
     def test_base(self):
+        """Cases"""
         self.a1 = Base(-32)
         self.a2 = Base(-2)
         self.a3 = Base(0)
