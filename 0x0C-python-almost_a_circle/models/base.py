@@ -3,8 +3,8 @@ class Base:
     """Clase base"""
     __nb_objects = 0
 
-    """Constructor"""
     def __init__(self, id=None):
+    """Constructor"""
         if id is not None:
             self.id = id
         else:
