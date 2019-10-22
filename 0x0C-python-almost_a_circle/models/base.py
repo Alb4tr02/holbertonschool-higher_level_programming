@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Module class Base """
+
+
 class Base:
     """Clase base"""
     __nb_objects = 0
