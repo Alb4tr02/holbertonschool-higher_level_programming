@@ -48,7 +48,7 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """dict"""
+        """dictionary method"""
         l_name = list(vars(self).keys())
         l_value = list(vars(self).values())
         pos = 32
