@@ -55,5 +55,7 @@ class Square(Rectangle):
             if l_name[i].startswith("_"):
                 l_name[i] = str(l_name[i]).split("__")[1]
             if l_name[i] == "width" or l_name[i] == "height":
+                if l_name[i] == "height":
+                    del l_value[i]
                 l_name[i] = "size"
-        return dict(zip(set(l_name), set(l_value)))
+        return dict(zip(set(l_name), l_value))
