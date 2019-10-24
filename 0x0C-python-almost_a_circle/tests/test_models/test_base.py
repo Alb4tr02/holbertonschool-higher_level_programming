@@ -30,6 +30,3 @@ class TestBaseClass(unittest.TestCase):
         Base.id = 34
         self.a9 = Base()
         self.assertEqual(self.a9.id, 2)
-
-if __name__ == "__main__":
-    unittest.main()
