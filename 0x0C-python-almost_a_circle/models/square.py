@@ -51,11 +51,13 @@ class Square(Rectangle):
         """dict"""
         l_name = list(vars(self).keys())
         l_value = list(vars(self).values())
+        pos = 32
         for i in range(len(l_name)):
             if l_name[i].startswith("_"):
                 l_name[i] = str(l_name[i]).split("__")[1]
             if l_name[i] == "width" or l_name[i] == "height":
                 if l_name[i] == "height":
-                    del l_value[i]
+                    pos = i
                 l_name[i] = "size"
-        return dict(zip(set(l_name), l_value))
+        del l_name[pos], l_value[pos]
+        return dict(zip(l_name, l_value))
