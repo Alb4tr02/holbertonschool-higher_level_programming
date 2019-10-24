@@ -25,3 +25,24 @@ class Square(Rectangle):
         """size setter"""
         self.width = size
         self.height = size
+
+    def update(self, *args, **kwargs):
+        """update the rectangle"""
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
+        if not (args is not None and len(args) > 0):
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.width = kwargs["size"]
+                self.height = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
