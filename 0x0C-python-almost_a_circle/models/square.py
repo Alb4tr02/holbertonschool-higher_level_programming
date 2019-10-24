@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Square """
 
+from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """Square son of Rectangle :v"""
