@@ -46,3 +46,14 @@ class Square(Rectangle):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """dict"""
+        l_name = list(vars(self).keys())
+        l_value = list(vars(self).values())
+        for i in range(len(l_name)):
+            if l_name[i].startswith("_"):
+                l_name[i] = str(l_name[i]).split("__")[1]
+            if l_name[i] == "width" or l_name[i] == "height":
+                l_name[i] = "size"
+        return dict(zip(set(l_name), set(l_value)))
