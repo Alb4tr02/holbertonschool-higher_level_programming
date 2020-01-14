@@ -8,9 +8,7 @@ import sys
 
 if __name__ == "__main__":
     url = "https://swapi.co/api/people/?search="
-    query = ""
-    if len(sys.argv) > 1:
-        query = sys.argv[1]
+    query = sys.argv[1]
     url = url+query
     req = requests.get(url)
     json = req.json()
