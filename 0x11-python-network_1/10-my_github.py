@@ -8,10 +8,12 @@ import sys
 
 if __name__ == "__main__":
     url = "https://api.github.com/users/"
-    query = ""
-    if len(sys.argv) > 1:
-        query = sys.argv[1]
-    url = url+query
-    req = requests.get(url)
+    user = sys.argv[1]
+    password = sys.argv[2]
+    url = url+user
+    req = requests.get(url, auth=(url, password))
     json = req.json()
-    print(json['id'])
+    try:
+        print(json['id'])
+    except KeyError:
+        print("None")
