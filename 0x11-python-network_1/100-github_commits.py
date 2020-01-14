@@ -8,8 +8,8 @@ import sys
 
 if __name__ == "__main__":
     url = "https://api.github.com/repos/"
-    user = sys.argv[1]
-    repo = sys.argv[2]
+    user = sys.argv[2]
+    repo = sys.argv[1]
     url = url + user + "/" + repo + "/commits"
     req = requests.get(url)
     json = req.json()
