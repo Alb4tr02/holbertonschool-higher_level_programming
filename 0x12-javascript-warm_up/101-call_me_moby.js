@@ -1,4 +1,5 @@
 #!/usr/bin/node
+/* eslint-disable no-eval */
 // callMeMoby.js
 exports.callMeMoby = function (x, theFunction) {
   const rep = eval(theFunction);
