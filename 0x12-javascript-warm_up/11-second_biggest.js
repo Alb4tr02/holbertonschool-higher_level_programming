@@ -9,6 +9,8 @@ if (process.argv.length === 2 || process.argv.length === 3) {
     if (Number(process.argv[i]) > first) {
       second = first;
       first = Number(process.argv[i]);
+    } else if (Number(process.argv[i]) > second && Number(process.argv[i] < first)) {
+      second = Number(process.argv[i]);
     }
   }
   console.log(second);
