@@ -11,5 +11,5 @@ if (process.argv.length === 2 || process.argv.length === 3) {
       first = Number(process.argv[i]);
     }
   }
+  console.log(second);
 }
-console.log(second);
